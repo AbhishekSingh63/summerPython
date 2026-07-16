@@ -1,0 +1,11 @@
+def print_invoice(item, price, quantity, subtotal, discount, tax, final_amount):
+    print("\nINVOICE")
+    print(f"Item        : {item}")
+    print(f"Price       : ₹{price:.2f}")
+    print(f"Quantity    : {quantity}")
+    print(f"Subtotal    : ₹{subtotal:.2f}")
+    print(f"Discount    : ₹{discount:.2f}")
+    print(f"GST (18%)   : ₹{tax:.2f}")
+    print()
+    print(f"Total Amount: ₹{final_amount:.2f}")
+    print()
