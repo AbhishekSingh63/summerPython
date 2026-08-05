@@ -1,0 +1,8 @@
+patient_id,patient_name,blood_group,disease,phone,hospital_id
+1,"Ramesh Gupta",A+,Thalassemia,9123456780,1
+2,"Sunita Devi",O+,Anemia,9123456781,2
+3,"Manoj Tiwari",B+,Dengue,9123456782,3
+4,"Kavita Yadav",AB+,"Surgery - Cardiac",9123456783,4
+5,"Arjun Kumar",O-,"Accident Trauma",9123456784,5
+6,"Meena Kumari",A-,Leukemia,9123456785,6
+7,"Deepak Chauhan",B-,"Surgery - Orthopedic",9123456786,1

@@ -1,0 +1,8 @@
+request_id,patient_id,blood_group,units_required,request_date,status
+1,1,A+,2,2026-07-01,Approved
+2,2,O+,3,2026-07-05,Approved
+3,3,B+,1,2026-07-10,Approved
+4,4,AB+,2,2026-07-12,Approved
+5,5,O-,4,2026-07-15,Approved
+6,6,A-,1,2026-07-18,Pending
+7,7,B-,2,2026-07-20,Rejected
