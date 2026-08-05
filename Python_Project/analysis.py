@@ -1,10 +1,13 @@
 import numpy as np
 from data_loader import *
+from utils import heading
 
+
+
+
+# Data Cleaning and Preparation
 def data_overview():
-    print("=" * 60)
-    print("DONORS DATASET OVERVIEW")
-    print("=" * 60)
+    heading("DONORS DATASET OVERVIEW")
 
     print("\nFirst 5 Records")
     print(donors.head())
@@ -23,13 +26,13 @@ def data_overview():
 
 def check_missing_values():
     print("\nMissing Values")
-    print("-" * 40)
+    print("*" * 50)
     print(donors.isnull().sum())
 
 
 def check_duplicates():
     print("\nDuplicate Records")
-    print("-" * 40)
+    print("*" * 50)
 
     duplicates = donors.duplicated().sum()
     print("Duplicate Rows :", duplicates)
@@ -44,7 +47,7 @@ def remove_duplicates():
     after = len(donors)
 
     print("\nDuplicate Removal")
-    print("-" * 40)
+    print("*" * 50)
     print("Rows Before :", before)
     print("Rows After  :", after)
 
@@ -78,19 +81,18 @@ def blood_group_count():
 
 
 
+
+# Data Analysis
+
 def total_donors():
-    print("\n" + "="*50)
-    print("TOTAL DONORS")
-    print("="*50)
+    heading("TOTAL DONORS")
 
     total = len(donors)
 
     print("Total Donors :", total)
 
 def average_age():
-    print("\n" + "="*50)
-    print("AVERAGE DONOR AGE")
-    print("="*50)
+    heading("AVERAGE DONOR AGE")
 
     avg = np.mean(donors["age"])
 
@@ -98,17 +100,13 @@ def average_age():
 
 def blood_group_distribution():
 
-    print("\n" + "="*50)
-    print("BLOOD GROUP DISTRIBUTION")
-    print("="*50)
+    heading("BLOOD GROUP DISTRIBUTION")
 
     print(donors["blood_group"].value_counts())
 
 def city_wise_donors():
 
-    print("\n" + "="*50)
-    print("CITY-WISE DONORS")
-    print("="*50)
+    heading("CITY-WISE DONORS")
 
     city = donors.groupby("city")["donor_id"].count()
 
@@ -116,17 +114,13 @@ def city_wise_donors():
 
 def blood_stock_summary():
 
-    print("\n" + "="*50)
-    print("BLOOD STOCK")
-    print("="*50)
+    heading("BLOOD STOCK")
 
     print(blood_stock)
 
 def hospital_patients():
 
-    print("\n" + "="*50)
-    print("HOSPITAL-WISE PATIENTS")
-    print("="*50)
+    heading("HOSPITAL-WISE PATIENTS")
 
     merged = patients.merge(
         hospitals,
